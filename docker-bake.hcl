@@ -5,11 +5,11 @@ variable IMAGE_REGISTRY_PREFIX {
 
 
 group "all_nzyme_nodes" {
-  targets = ["nzyme_node_v2a9", "nzyme_node_v2a10", "nzyme_node_v2a12", "nzyme_node_v2a13", "nzyme_node_v2a15"]
+  targets = ["nzyme_node_v2a13", "nzyme_node_v2a15"]
 }
 
 group "all_nzyme_taps" {
-  targets = ["nzyme_tap_v2a9", "nzyme_tap_v2a10", "nzyme_tap_v2a12"]
+  targets = ["nzyme_tap_v2a10", "nzyme_tap_v2a12"]
 }
 
 
@@ -34,33 +34,6 @@ target "_nzyme_node" {
         # What you'll need to update
         DOWNLOAD_TARGET = ""
     }    
-}
-
-target "nzyme_node_v2a9" { 
-    inherits = ["_nzyme_node"]
-    args = {
-        OPEN_JDK_PACKAGE =  "openjdk-11-jre-headless"
-        DOWNLOAD_TARGET = "https://github.com/nzymedefense/nzyme/releases/download/2.0.0-alpha.9/nzyme-node_2.0.0-alpha.9.deb"
-    }
-    tags = ["${IMAGE_REGISTRY_PREFIX}${NZYME_NODE_DOCKER_IMAGE_NAME}:v2a9"]
-}
-
-target "nzyme_node_v2a10" { 
-    inherits = ["_nzyme_node"]
-    args = {
-        OPEN_JDK_PACKAGE =  "openjdk-11-jre-headless"
-        DOWNLOAD_TARGET = "https://github.com/nzymedefense/nzyme/releases/download/2.0.0-alpha.10/nzyme-node_2.0.0-alpha.10.deb"
-    }
-    tags = ["${IMAGE_REGISTRY_PREFIX}${NZYME_NODE_DOCKER_IMAGE_NAME}:v2a10"]
-}
-
-target "nzyme_node_v2a12" { 
-    inherits = ["_nzyme_node"]
-    args = {
-        OPEN_JDK_PACKAGE =  "openjdk-11-jre-headless"
-        DOWNLOAD_TARGET = "https://github.com/nzymedefense/nzyme/releases/download/2.0.0-alpha.12/nzyme-node_2.0.0-alpha.12.deb"
-    }
-    tags = ["${IMAGE_REGISTRY_PREFIX}${NZYME_NODE_DOCKER_IMAGE_NAME}:v2a12"]
 }
 
 target "nzyme_node_v2a13" { 
