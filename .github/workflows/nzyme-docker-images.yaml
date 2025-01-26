@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/bake-action@v4
+        uses: docker/bake-action@v5
         env:
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
           # TODO: Not so much a secret but trying getting vars to use but couldn't... so this will do
