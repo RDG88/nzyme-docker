@@ -33,6 +33,11 @@ RUN apt update && \
     # remove file as tmp uses memory and deleting the file frees up image size
     rm ${NZYME_DEB_FILE}
 
+# Provide custom startup script and template
+RUN mkdir -p /etc/nzyme
+COPY start.sh /etc/nzyme/start.sh
+COPY nzyme-tap.conf.template /etc/nzyme/nzyme-tap.conf.template
+
 # Create nzyme user and change all relvant files to be owned by nzyme 
 RUN useradd -m nzyme && \
     chown -R nzyme:nzyme /etc/nzyme/ && \
