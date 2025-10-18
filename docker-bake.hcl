@@ -5,11 +5,11 @@ variable IMAGE_REGISTRY_PREFIX {
 
 
 group "all_nzyme_nodes" {
-  targets = ["nzyme_node_v2a13", "nzyme_node_v2a15"]
+  targets = ["nzyme_node_v2a15"]
 }
 
 group "all_nzyme_taps" {
-  targets = ["nzyme_tap_v2a10", "nzyme_tap_v2a12", "nzyme_tap_v2a17"]
+  targets = ["nzyme_tap_v2a17"]
 }
 
 
