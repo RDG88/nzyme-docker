@@ -1,6 +1,6 @@
 
 variable IMAGE_REGISTRY_PREFIX {
-    default = "RDG88/"
+    default = "Graafnet/"
 }
 
 
