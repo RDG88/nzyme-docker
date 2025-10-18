@@ -9,7 +9,7 @@ group "all_nzyme_nodes" {
 }
 
 group "all_nzyme_taps" {
-  targets = ["nzyme_tap_v2a10", "nzyme_tap_v2a12"]
+  targets = ["nzyme_tap_v2a10", "nzyme_tap_v2a12", "nzyme_tap_v2a17"]
 }
 
 
