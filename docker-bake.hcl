@@ -109,3 +109,10 @@ target "nzyme_tap_v2a13" {
     tags = ["${IMAGE_REGISTRY_PREFIX}${NZYME_TAP_DOCKER_IMAGE_NAME}:v2a13"]
 }
 
+target "nzyme_tap_v2a17" { 
+    inherits = ["_nzyme_tap"]
+    args = {
+        DOWNLOAD_TARGET = "https://github.com/nzymedefense/nzyme/releases/download/2.0.0-alpha.17/nzyme-tap_rpios-12bookworm-arm64-2.0.0-alpha.17.deb"
+    }
+    tags = ["${IMAGE_REGISTRY_PREFIX}${NZYME_TAP_DOCKER_IMAGE_NAME}:v2a17"]
+}
