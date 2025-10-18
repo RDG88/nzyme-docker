@@ -29,9 +29,10 @@ jobs:
       - name: Preview bake plan
         run: |
           echo "IMAGE_REGISTRY_PREFIX=${IMAGE_REGISTRY_PREFIX}"
-          docker buildx bake --print --files ./docker-bake.hcl
+          docker buildx bake --print -f ./docker-bake.hcl
         env:
           IMAGE_REGISTRY_PREFIX: ${{ secrets.IMAGE_REGISTRY_PREFIX }}
+
 
       - name: Build and push
         uses: docker/bake-action@v5
